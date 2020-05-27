@@ -41,5 +41,17 @@ public class ContratoPorHora {
     public void setHora(Integer hora) {
         this.hora = hora;
     }
+
+    public double totalValue(){
+        return Valor_Por_Hora * hora;
+    }
+    
+    void add(ContratoPorHora contratos) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void remove(ContratoPorHora contratos) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
