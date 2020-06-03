@@ -14,18 +14,19 @@ public class Programa {
     public static void main(String[] args) throws ParseException {
         
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-
+ 
         String departamentoNome = JOptionPane.showInputDialog("Digite o nome do departamento:");
         String trabalhadorName = JOptionPane.showInputDialog("Digite seu nome: ");
         String trabalhadornivel = JOptionPane.showInputDialog("Digite seu nivel (JUNIOR, PLENO, SENIOR): ");
         Double SalarioBase = Double.parseDouble(JOptionPane.showInputDialog("Digite seu salario base"));
-
-        Trabalhador trabalhador = new Trabalhador(trabalhadorName, NivelDeTrabalho.valueOf(trabalhadorName), SalarioBase, new Departamento(departamentoNome));
-
+        
+        
+        Trabalhador trabalhador = new Trabalhador(trabalhadorName, NivelDeTrabalho.valueOf(trabalhadornivel), SalarioBase, new Departamento(departamentoNome));
         int n = Integer.parseInt(JOptionPane.showInputDialog("Quantos contratos o trabalhor possui ?"));
+        
 
         for ( int i=1; i<=n; i++){
-            JOptionPane.showInputDialog("Digite o contrato #" + i + "data:");
+            JOptionPane.showInputDialog("Digite o contrato #" + i + " Mês:");
             String data = JOptionPane.showInputDialog("Digite a data (DD/MM/YYYY): ");
             Date ContratoDate = sdf.parse(data);
             Double ValorPorHora = Double.parseDouble(JOptionPane.showInputDialog("Digite o Valor por Hora"));
